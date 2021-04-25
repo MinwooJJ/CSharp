@@ -59,6 +59,9 @@ namespace AnimalShelter
 			this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+			this.CusPet = new System.Windows.Forms.Label();
+			this.label12 = new System.Windows.Forms.Label();
+			this.CusPetInfo = new System.Windows.Forms.Label();
 			this.CusDetailPanel.SuspendLayout();
 			this.CusNewPanel.SuspendLayout();
 			this.CusListPanel.SuspendLayout();
@@ -68,6 +71,9 @@ namespace AnimalShelter
 			// 
 			// CusDetailPanel
 			// 
+			this.CusDetailPanel.Controls.Add(this.CusPetInfo);
+			this.CusDetailPanel.Controls.Add(this.label12);
+			this.CusDetailPanel.Controls.Add(this.CusPet);
 			this.CusDetailPanel.Controls.Add(this.CusDescription);
 			this.CusDetailPanel.Controls.Add(this.CusAge);
 			this.CusDetailPanel.Controls.Add(this.CusAddress);
@@ -78,9 +84,9 @@ namespace AnimalShelter
 			this.CusDetailPanel.Controls.Add(this.label7);
 			this.CusDetailPanel.Controls.Add(this.label10);
 			this.CusDetailPanel.Controls.Add(this.label9);
-			this.CusDetailPanel.Location = new System.Drawing.Point(342, 171);
+			this.CusDetailPanel.Location = new System.Drawing.Point(431, 27);
 			this.CusDetailPanel.Name = "CusDetailPanel";
-			this.CusDetailPanel.Size = new System.Drawing.Size(377, 411);
+			this.CusDetailPanel.Size = new System.Drawing.Size(309, 398);
 			this.CusDetailPanel.TabIndex = 0;
 			// 
 			// CusDescription
@@ -181,8 +187,7 @@ namespace AnimalShelter
 			this.CusNewPanel.Controls.Add(this.label3);
 			this.CusNewPanel.Controls.Add(this.label2);
 			this.CusNewPanel.Controls.Add(this.label1);
-			this.CusNewPanel.Dock = System.Windows.Forms.DockStyle.Right;
-			this.CusNewPanel.Location = new System.Drawing.Point(388, 24);
+			this.CusNewPanel.Location = new System.Drawing.Point(34, 27);
 			this.CusNewPanel.Name = "CusNewPanel";
 			this.CusNewPanel.Size = new System.Drawing.Size(352, 417);
 			this.CusNewPanel.TabIndex = 1;
@@ -282,8 +287,7 @@ namespace AnimalShelter
 			// CusListPanel
 			// 
 			this.CusListPanel.Controls.Add(this.CusList);
-			this.CusListPanel.Controls.Add(this.CusDetailPanel);
-			this.CusListPanel.Location = new System.Drawing.Point(0, 77);
+			this.CusListPanel.Location = new System.Drawing.Point(0, 71);
 			this.CusListPanel.Name = "CusListPanel";
 			this.CusListPanel.Size = new System.Drawing.Size(414, 364);
 			this.CusListPanel.TabIndex = 2;
@@ -341,12 +345,38 @@ namespace AnimalShelter
 			this.toolStripMenuItem1.Size = new System.Drawing.Size(71, 20);
 			this.toolStripMenuItem1.Text = "새 입양자";
 			// 
+			// CusPet
+			// 
+			this.CusPet.AutoSize = true;
+			this.CusPet.Location = new System.Drawing.Point(23, 181);
+			this.CusPet.Name = "CusPet";
+			this.CusPet.Size = new System.Drawing.Size(22, 15);
+			this.CusPet.TabIndex = 15;
+			this.CusPet.Text = "펫:";
+			// 
+			// label12
+			// 
+			this.label12.AutoSize = true;
+			this.label12.Location = new System.Drawing.Point(-1422, 88);
+			this.label12.Name = "label12";
+			this.label12.Size = new System.Drawing.Size(0, 15);
+			this.label12.TabIndex = 16;
+			// 
+			// CusPetInfo
+			// 
+			this.CusPetInfo.AutoSize = true;
+			this.CusPetInfo.Location = new System.Drawing.Point(121, 181);
+			this.CusPetInfo.Name = "CusPetInfo";
+			this.CusPetInfo.Size = new System.Drawing.Size(0, 15);
+			this.CusPetInfo.TabIndex = 17;
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(740, 441);
 			this.Controls.Add(this.CusListPanel);
+			this.Controls.Add(this.CusDetailPanel);
 			this.Controls.Add(this.CusNewPanel);
 			this.Controls.Add(this.menuStrip1);
 			this.Name = "Form1";
@@ -397,6 +427,9 @@ namespace AnimalShelter
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
 		private System.Windows.Forms.MenuStrip menuStrip1;
 		private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+		private System.Windows.Forms.Label CusPetInfo;
+		private System.Windows.Forms.Label label12;
+		private System.Windows.Forms.Label CusPet;
 	}
 }
 

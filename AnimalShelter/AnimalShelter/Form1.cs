@@ -43,6 +43,23 @@ namespace AnimalShelter
 			CusAddress.Text = cus.address;
 			CusDescription.Text = cus.description;
 			CusIsQualified.Text = cus.IsQualified.ToString();
+
+			CusPetInfo.Text = "";
+			foreach (Pet pet in cus.MyPets)
+			{
+				CusPetInfo.Text += pet.name + ": " + pet.MakeSound();
+
+				if (pet is Cat)
+				{
+					CusPetInfo.Text += ":" + (pet as Cat).Scratch();
+				}
+				else if (pet is Dog)
+				{
+					CusPetInfo.Text += ":" + (pet as Dog).Bite();
+				}
+
+				CusPetInfo.Text += Environment.NewLine;
+			}
 		}
 
 		private void CusList_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -67,6 +84,19 @@ namespace AnimalShelter
 			CusListPanel.Dock = DockStyle.Fill;
 			CusDetailPanel.Dock = DockStyle.Right;
 			CusNewPanel.Dock = DockStyle.Right;
+
+			Customer cus = new Customer("m", "w", new DateTime(1989, 1, 2));
+
+			Cat cat = new Cat(1, "No", "white", "male");
+			cus.Adopt(cat);
+			Cat cat2 = new Cat(3, "Mid", "Red", "male");
+			cus.Adopt(cat2);
+
+			Dog dog = new Dog(2, "Yes", "black", "female", DogBreed.Mixed);
+			cus.Adopt(dog);
+
+			customers.Add(cus);
+			CusList.Rows.Add(cus.firstName, cus.Age, cus.IsQualified);
 		}
 
 		private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

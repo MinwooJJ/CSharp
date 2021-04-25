@@ -15,6 +15,8 @@ namespace AnimalShelter
 		public string address;
 		public string description;
 
+		private List<Pet> _myPets = new List<Pet>();
+
 		public Customer(string firstName, string lastName, DateTime birthday)
 		{
 			this.firstName = firstName;
@@ -42,6 +44,24 @@ namespace AnimalShelter
 		public bool IsQualified
 		{
 			get { return _isQualified; }
+		}
+
+		public List<Pet> MyPets
+		{
+			get { return _myPets; }
+		}
+
+		public bool Adopt(Pet pet)
+		{
+			if (_isQualified)
+			{
+				_myPets.Add(pet);
+				return true;
+			}
+			else
+			{
+				return false;
+			}
 		}
 	}
 }
